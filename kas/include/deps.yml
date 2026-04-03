@@ -1,0 +1,94 @@
+header:
+  version: 12
+
+repos:
+
+  meta-qcom-distro:
+    url: https://github.com/qualcomm-linux/meta-qcom-distro.git
+    branch: scarthgap
+    commit: d8e9c3a6e568f0b3a0e6ac32349f3e6646ca2163
+    path: layers/meta-qcom-distro
+
+  meta-qcom-auto-extras:
+    url: https://qpm-git.qualcomm.com/home2/git/qualcomm/snapdragon-auto-gen5-hgy-5-1-7-0_hlos_oem_metadata.git
+    tag: ES_8_r000341.1a
+    commit: 5f91a31ca1efa28a595128e6debe6947bc7db38a
+    path: layers/meta-qcom-auto-extras
+
+  meta-qcom-auto-distro:
+    url: https://git.codelinaro.org/clo/le/meta-qcom-auto-distro.git
+    branch: auto-yocto.qclinux.1.0.r5-rel
+    commit: c65ec5555796894bd8bb848567387cdd3462307a
+    path: layers/meta-qcom-auto-distro
+
+  meta-qcom-auto:
+    url: https://git.codelinaro.org/clo/le/meta-qcom-auto.git
+    branch: auto-yocto.qclinux.1.0.r5-rel
+    commit: d22375b629371523c1c6e371213a77b2d0ad1854
+    path: layers/meta-qcom-auto
+
+  poky:
+    url: https://git.yoctoproject.org/poky
+    branch: scarthgap
+    commit: 60d407517c930f71f871d495ddc180e39c5be9ad
+    path: layers/poky
+    layers:
+      meta:
+      meta-poky:
+
+  meta-qcom:
+    url: https://github.com/Linaro/meta-qcom
+    branch: scarthgap
+    commit: ec80a36bce11d8182b4bb2a6fa0359adfeccde0a
+    path: layers/meta-qcom
+
+  meta-virtualization:
+    url: https://git.yoctoproject.org/meta-virtualization
+    branch: scarthgap
+    commit: af1db2042caf8021d767dce1b26c08b59b96f3d1
+    path: layers/meta-virtualization
+
+  meta-clang:
+    url: https://github.com/kraj/meta-clang
+    branch: scarthgap
+    commit: e7dceb1c92caf7f21ef1d7b49c85328c30cffd90
+    path: layers/meta-clang
+
+  meta-openembedded:
+    url: https://github.com/openembedded/meta-openembedded
+    branch: scarthgap
+    commit: 15e18246dd0c0585cd1515a0be8ee5e2016d1329
+    path: layers/meta-openembedded
+    layers:
+      meta-filesystems:
+      meta-gnome:
+      meta-multimedia:
+      meta-networking:
+      meta-oe:
+      meta-perl:
+      meta-python:
+
+  meta-selinux:
+    url: https://git.yoctoproject.org/meta-selinux
+    branch: scarthgap
+    commit: 7df9cb7fca0bd026d766c98c8b82dcfc27f89c0f
+    path: layers/meta-selinux
+
+  meta-tensorflow:
+    url: https://git.yoctoproject.org/meta-tensorflow
+    branch: scarthgap
+    commit: eeee54cfa3c51c1fd99604a0d5f173096bdcf1da
+    path: layers/meta-tensorflow
+
+  meta-qcom-hwe:
+    url: https://github.com/qualcomm-linux/meta-qcom-hwe
+    branch: scarthgap
+    commit: 61d7b15a840af1263fc3efa50a6a082d463d4dbe
+    path: layers/meta-qcom-hwe
+
+  meta-qcom-realtime:
+    url: https://github.com/qualcomm-linux/meta-qcom-realtime
+    branch: scarthgap
+    commit: edd8a5945bb6d0bb616fe0262b6df0272375ae65
+    path: layers/meta-qcom-realtime
+
