@@ -1,0 +1,63 @@
+[submodule "layers/meta-openembedded"]
+	path = layers/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded
+	branch = scarthgap
+[submodule "layers/poky"]
+	path = layers/poky
+	url = https://git.yoctoproject.org/poky
+	branch = scarthgap
+[submodule "layers/meta-security"]
+	path = layers/meta-security
+	url = https://git.yoctoproject.org/meta-security
+	branch = scarthgap
+[submodule "layers/meta-virtualization"]
+	path = layers/meta-virtualization
+	url = https://git.yoctoproject.org/meta-virtualization
+	branch = scarthgap
+[submodule "layers/meta-selinux"]
+	path = layers/meta-selinux
+	url = https://git.yoctoproject.org/meta-selinux
+	branch = scarthgap
+[submodule "layers/meta-updater"]
+	path = layers/meta-updater
+	url = https://github.com/uptane/meta-updater
+	branch = scarthgap
+[submodule "layers/meta-tensorflow"]
+	path = layers/meta-tensorflow
+	url = https://git.yoctoproject.org/meta-tensorflow
+	branch = scarthgap
+[submodule "layers/meta-clang"]
+	path = layers/meta-clang
+	url = https://github.com/kraj/meta-clang
+	branch = scarthgap
+[submodule "layers/meta-qcom"]
+	path = layers/meta-qcom
+	url = https://github.com/Linaro/meta-qcom
+	branch = scarthgap
+[submodule "layers/meta-qcom-hwe"]
+	path = layers/meta-qcom-hwe
+	url = https://github.com/qualcomm-linux/meta-qcom-hwe
+	branch = scarthgap
+[submodule "layers/meta-qcom-distro"]
+	path = layers/meta-qcom-distro
+	url = https://github.com/qualcomm-linux/meta-qcom-distro
+	branch = scarthgap
+[submodule "layers/meta-qcom-realtime"]
+	path = layers/meta-qcom-realtime
+	url = https://github.com/qualcomm-linux/meta-qcom-realtime
+	branch = scarthgap
+[submodule "poky/build/conf"]
+	path = poky/build/conf
+	url = https://git.codelinaro.org/clo/le/qti-conf
+	branch = auto-yocto.qclinux.1.0.r5-rel
+[submodule "layers/meta-qcom-auto-distro"]
+	path = layers/meta-qcom-auto-distro
+	url = https://git.codelinaro.org/clo/le/meta-qcom-auto-distro
+	branch = auto-yocto.qclinux.1.0.r5-rel
+[submodule "layers/meta-qcom-auto"]
+	path = layers/meta-qcom-auto
+	url = https://git.codelinaro.org/clo/le/meta-qcom-auto
+	branch = auto-yocto.qclinux.1.0.r5-rel
+[submodule "layers/meta-qcom-auto-extras"]
+	path = layers/meta-qcom-auto-extras
+	url = https://qpm-git.qualcomm.com/home2/git/qualcomm/snapdragon-auto-gen5-hgy-5-1-7-0_hlos_oem_metadata
