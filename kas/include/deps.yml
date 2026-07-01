@@ -1,0 +1,113 @@
+header:
+  version: 12
+
+repos:
+  kas-config:
+    path: kas
+    layers:
+      .: false
+
+  meta-openembedded:
+    url: https://github.com/openembedded/meta-openembedded.git
+    branch: scarthgap
+    commit: 15e18246dd0c0585cd1515a0be8ee5e2016d1329
+    path: layers/meta-openembedded
+    layers:
+      meta-filesystems:
+      meta-gnome:
+      meta-multimedia:
+      meta-networking:
+      meta-oe:
+      meta-perl:
+      meta-python:
+
+  meta-security:
+    url: https://git.yoctoproject.org/meta-security.git
+    branch: scarthgap
+    commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
+    path: layers/meta-security
+
+  meta-virtualization:
+    url: https://git.yoctoproject.org/meta-virtualization.git
+    branch: scarthgap
+    commit: af1db2042caf8021d767dce1b26c08b59b96f3d1
+    path: layers/meta-virtualization
+
+  meta-selinux:
+    url: https://git.yoctoproject.org/meta-selinux.git
+    branch: scarthgap
+    commit: 7df9cb7fca0bd026d766c98c8b82dcfc27f89c0f
+    path: layers/meta-selinux
+
+  meta-updater:
+    url: https://github.com/uptane/meta-updater.git
+    branch: scarthgap
+    commit: b275153c9c8ea09e27d41db9f2faba3ebf92d2c2
+    path: layers/meta-updater
+
+  meta-tensorflow:
+    url: https://git.yoctoproject.org/meta-tensorflow.git
+    branch: scarthgap
+    commit: eeee54cfa3c51c1fd99604a0d5f173096bdcf1da
+    path: layers/meta-tensorflow
+
+  meta-clang:
+    url: https://github.com/kraj/meta-clang.git
+    branch: scarthgap
+    commit: e7dceb1c92caf7f21ef1d7b49c85328c30cffd90
+    path: layers/meta-clang
+
+  meta-qcom:
+    url: https://github.com/Linaro/meta-qcom.git
+    branch: scarthgap
+    commit: ec80a36bce11d8182b4bb2a6fa0359adfeccde0a
+    path: layers/meta-qcom
+
+  meta-qcom-hwe:
+    url: https://github.com/qualcomm-linux/meta-qcom-hwe.git
+    branch: scarthgap
+    commit: 8e03a1928f0a0c91e4eafe4536b365872498aed2
+    path: layers/meta-qcom-hwe
+
+  meta-qcom-distro:
+    url: https://github.com/qualcomm-linux/meta-qcom-distro.git
+    branch: scarthgap
+    commit: 5cede695df3b6a1e22bfd26fbccaea1685ff742f
+    path: layers/meta-qcom-distro
+
+  meta-qcom-realtime:
+    url: https://github.com/qualcomm-linux/meta-qcom-realtime.git
+    branch: scarthgap
+    commit: edd8a5945bb6d0bb616fe0262b6df0272375ae65
+    path: layers/meta-qcom-realtime
+
+  meta-qcom-auto:
+    url: https://git.codelinaro.org/clo/le/meta-qcom-auto.git
+    branch: auto-yocto.qclinux.1.0.r9-rel
+    commit: 55d69711290495fa0a6bf2b152655a24a5e73b6b
+    path: layers/meta-qcom-auto
+
+  meta-qcom-auto-distro:
+    url: https://git.codelinaro.org/clo/le/meta-qcom-auto-distro
+    branch: auto-yocto.qclinux.1.0.r9-rel
+    commit: 4439f6b9746ce7c6c246b1d6c8a0f891363ed7d5
+    path: layers/meta-qcom-auto-distro
+
+  meta-qcom-auto-extras:
+    url: https://qpm-git.qualcomm.com/home2/git/qualcomm/snapdragon-auto-2026-le-1-1_hlos_oem_metadata.git
+    tag: ES9_8797_SRC_URI_r000041.1
+    commit: d1041901e98b88643e39d10e87da914654ced306
+    path: layers/meta-qcom-auto-extras
+
+  poky:
+    url: https://git.yoctoproject.org/poky.git
+    branch: scarthgap
+    commit: 828c9d09b4d056f77399fcb4bca8582f9c26ac84
+    path: layers/poky
+    layers:
+      meta:
+      meta-poky:
+    patches:
+      crate-static-url:
+        repo: kas-config
+        path: patches/poky/0001-fetch2-crate-use-static-url.patch

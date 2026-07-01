@@ -1,0 +1,13 @@
+diff --git a/bitbake/lib/bb/fetch2/crate.py b/bitbake/lib/bb/fetch2/crate.py
+index 01d49435c3..2d8cdaca51 100644
+--- a/bitbake/lib/bb/fetch2/crate.py
++++ b/bitbake/lib/bb/fetch2/crate.py
+@@ -67,7 +67,7 @@ class Crate(Wget):
+ 
+         # if using upstream just fix it up nicely
+         if host == 'crates.io':
+-            host = 'crates.io/api/v1/crates'
++            host = 'static.crates.io/crates'
+ 
+         ud.url = "https://%s/%s/%s/download" % (host, name, version)
+         ud.parm['downloadfilename'] = "%s-%s.crate" % (name, version)

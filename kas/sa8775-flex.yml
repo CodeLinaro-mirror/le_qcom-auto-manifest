@@ -1,0 +1,12 @@
+header:
+  version: 12
+  includes:
+    - include/deps.yml
+    - include/base.yml
+
+machine: sa8775-flex
+
+target:
+  - machine-image-pvm
+  - machine-image-lagvm
+  - machine-image
