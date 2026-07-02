@@ -1,8 +1,8 @@
 header:
   version: 12
   includes:
-    - include/deps.yml
-    - include/base.yml
+    - kas/include/deps.yml
+    - kas/include/base.yml
 
 machine: sa8775-flex
 

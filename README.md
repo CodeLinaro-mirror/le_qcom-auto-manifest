@@ -39,7 +39,7 @@ git config --global \
   - Verify that the commit reference matches the intended release tag before starting the build.
 
 ### Customer ID
-- Ensure that the cust_id specified in include/base.yml is updated to the appropriate customer ID configured in QPM.
+- Ensure that the cust_id specified in kas/include/base.yml is updated to the appropriate customer ID configured in QPM.
 
 </details>
 
