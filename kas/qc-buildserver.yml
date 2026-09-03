@@ -2,6 +2,10 @@ header:
   version: 12
 
 local_conf_header:
+    Hashserv: |
+        BB_SIGNATURE_HANDLER = "OEEquivHash"
+        BB_HASHSERVE = "auto"
+
     Parallelism: |
         # Capture the count of cpu cores available from the host.
         CPU_COUNT = "${@oe.utils.cpu_count(at_least=2)}"

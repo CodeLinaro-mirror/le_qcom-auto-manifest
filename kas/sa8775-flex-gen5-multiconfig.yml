@@ -1,0 +1,17 @@
+header:
+  version: 12
+  includes:
+    - include/deps.yml
+    - include/base.yml
+
+# Base machine context for top-level recipe parsing. Without this, MACHINEOVERRIDES
+# (gen5/sa8775) are never set during the base parse, causing qclinux-bbmask.inc
+# BBMASK rules to not fire and recipes with missing local sources to fail checksum.
+machine: gen5
+
+# Build both images in a single bitbake invocation.
+target:
+  - "mc:sa8775-flex:machine-image-pvm"
+  - "mc:sa8775-flex:machine-image-lagvm"
+  - "mc:sa8775-flex:machine-image"
+  - "mc:gen5:machine-image"

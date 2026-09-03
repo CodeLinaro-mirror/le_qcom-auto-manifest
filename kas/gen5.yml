@@ -4,9 +4,7 @@ header:
     - include/deps.yml
     - include/base.yml
 
-machine: sa8775-flex
+machine: gen5
 
 target:
-  - machine-image-pvm
-  - machine-image-lagvm
   - machine-image

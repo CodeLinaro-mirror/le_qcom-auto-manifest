@@ -5,7 +5,7 @@ repos:
   kas-config:
     path: kas
     layers:
-      .: false
+      .: disabled
 
   meta-openembedded:
     url: https://github.com/openembedded/meta-openembedded.git
@@ -26,6 +26,8 @@ repos:
     branch: scarthgap
     commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
     path: layers/meta-security
+    layers:
+      .: disabled
 
   meta-virtualization:
     url: https://git.yoctoproject.org/meta-virtualization.git
@@ -84,30 +86,30 @@ repos:
   meta-qcom-auto:
     url: https://git.codelinaro.org/clo/le/meta-qcom-auto.git
     branch: auto-yocto.qclinux.1.0.r9-rel
-    commit: 55d69711290495fa0a6bf2b152655a24a5e73b6b
+    commit: b6d4202f8f6eca93d278cd6943d03410cabf5eb2
     path: layers/meta-qcom-auto
 
   meta-qcom-auto-distro:
-    url: https://git.codelinaro.org/clo/le/meta-qcom-auto-distro
+    url: https://git.codelinaro.org/clo/le/meta-qcom-auto-distro.git
     branch: auto-yocto.qclinux.1.0.r9-rel
-    commit: 4439f6b9746ce7c6c246b1d6c8a0f891363ed7d5
+    commit: ed0273bd7fa4527589a70754e1dedac1d79f2283
     path: layers/meta-qcom-auto-distro
 
   meta-qcom-auto-extras:
     url: https://qpm-git.qualcomm.com/home2/git/qualcomm/snapdragon-auto-2026-le-1-1_hlos_oem_metadata.git
-    tag: ES9_8797_SRC_URI_r000041.1
-    commit: d1041901e98b88643e39d10e87da914654ced306
+    tag: LE.1.1_SRC_URI_r000111.1
+    commit: f13cfebf2053b850bde3a8fd1a50ffe2b96fd301
     path: layers/meta-qcom-auto-extras
 
   poky:
     url: https://git.yoctoproject.org/poky.git
     branch: scarthgap
-    commit: 828c9d09b4d056f77399fcb4bca8582f9c26ac84
+    commit: 935d78df65feaaec593ed6b39015e698a0a114a5
     path: layers/poky
     layers:
       meta:
       meta-poky:
     patches:
-      crate-static-url:
+      pseudo-openat2:
         repo: kas-config
-        path: patches/poky/0001-fetch2-crate-use-static-url.patch
+        path: patches/poky/0001-pseudo-upgrade-1.9.9.patch

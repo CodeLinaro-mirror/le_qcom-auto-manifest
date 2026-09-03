@@ -6,90 +6,29 @@ target:
 
 distro: auto
 
-bblayers_conf_header:
-  standard: |
-    SRC_TREE := "${@'/work' if d.getVar('TOPDIR', True) == '/build' else os.path.abspath(os.path.join(d.getVar('TOPDIR', True), '..'))}"
-
-    BBPATH = "${TOPDIR}"
-
-    BBFILES = " \
-    "
-
-    BBLAYERS ?= " \
-      ${SRC_TREE}/layers/meta-qcom-distro \
-      ${SRC_TREE}/layers/meta-qcom-auto-extras \
-      ${SRC_TREE}/layers/meta-qcom-auto-distro \
-      ${SRC_TREE}/layers/meta-qcom-auto \
-      ${SRC_TREE}/layers/meta-qcom-realtime \
-      ${SRC_TREE}/layers/meta-clang \
-      ${SRC_TREE}/layers/meta-openembedded/meta-filesystems \
-      ${SRC_TREE}/layers/meta-openembedded/meta-gnome \
-      ${SRC_TREE}/layers/meta-openembedded/meta-multimedia \
-      ${SRC_TREE}/layers/meta-openembedded/meta-networking \
-      ${SRC_TREE}/layers/meta-openembedded/meta-oe \
-      ${SRC_TREE}/layers/meta-openembedded/meta-perl \
-      ${SRC_TREE}/layers/meta-openembedded/meta-python \
-      ${SRC_TREE}/layers/meta-updater \
-      ${SRC_TREE}/layers/poky/meta \
-      ${SRC_TREE}/layers/poky/meta-poky \
-      ${SRC_TREE}/layers/meta-selinux \
-      ${SRC_TREE}/layers/meta-virtualization \
-      ${SRC_TREE}/layers/meta-tensorflow \
-      ${SRC_TREE}/layers/meta-qcom-hwe \
-      ${SRC_TREE}/layers/meta-qcom \
-    "
-
-
 local_conf_header:
   standard: |
     VARIANT = "debug"
     CONF_VERSION = "2"
-    BBMASK ?= ""
-    BBMASK += "/meta-updater/recipes-sota/aktualizr/aktualizr_git.bb"
-    BB_GENERATE_MIRROR_TARBALLS = "1"
-    BB_GIT_VERBOSE_FETCH = "0"
-    PATCHRESOLVE = "noop"
-    BBMULTICONFIG = "qcom-guestvm"
-
-    PACKAGE_DEBUG_SPLIT_STYLE = ".debug"
-    USER_CLASSES ?= "buildname"
-    BUILDNAME = "${@get_tag('${SRC_DIR_ROOT}', d)}"
-
-    # Keep compatibility with sparse vendor layers.
-    BBFILE_PATTERN_IGNORE_EMPTY_qti-bsp-prop = "1"
-    BBFILE_PATTERN_IGNORE_EMPTY_qcom = "1"
-    BBFILE_PATTERN_IGNORE_EMPTY_qcom-hwe = "1"
-    BBFILE_PATTERN_IGNORE_EMPTY_qcom-distro = "1"
-    TARGET_DIR ?= ""
-
-    SDKMACHINE = "x86_64"
-    DEBUG_BUILD = "0"
-    PERFORMANCE_BUILD = "0"
-    QCOM_SELECTED_BSP = "custom"
-    BB_DANGLINGAPPENDS_WARNONLY_forcevariable = "false"
 
     INHERIT += "qfile"
-    BBMULTICONFIG:remove = "qcom-guestvm"
-    INHERIT:remove = "rm_work"
-    BBMULTICONFIG:append = " sa8775-flex sa8797"
+    BBMULTICONFIG:append = " sa8775-flex gen5"
 
-    SRC_DIR_ROOT = "${SRC_TREE}"
-    AUTOSOURCES = "${SRC_TREE}"
-    PATH_TO_REPO := "git://${SRC_TREE}"
-    PATH_TO_KERNEL := "git://${SRC_TREE}/sources"
+    SRC_DIR_ROOT := "${@os.path.abspath(os.path.join(d.getVar('COREBASE'), '../..'))}"
+    PATH_TO_REPO := "git://${SRC_DIR_ROOT}"
     PROTO = "file"
-    export KDIR = "${STAGING_KERNEL_DIR}"
 
-    SECTOOLS_V1_DIR ??= "/pkg/sectools/int/latest"
-    SECTOOLS_V2_DIR ??= "/pkg/sectools/v2/1.21/Linux"
+    MIRRORS += "git://github.com \
+        git://git.codelinaro.org/clo/yocto-mirrors/github/ \
+        git://.*/.*/ git://git.codelinaro.org/clo/yocto-mirrors/ \
+        https://.*/.*/ https://codelinaro.jfrog.io/artifactory/codelinaro-le/ \
+    "
+
+    BB_SIGNATURE_HANDLER = "OEEquivHash"
+    BB_HASHSERVE ?= "auto"
 
     BUILDCFG_VARS += "VARIANT MACHINE_FEATURES"
-    BB_BASEHASH_IGNORE_VARS:append = " SRC_TREE KDIR WORKSPACE AUTOSOURCES PATH_TO_KERNEL BSPDIR BUILDNAME SRC_DIR_ROOT PATH_TO_REPO QTI_METAPATH_BASE QTI_METAPATH_BASE_PROP QTI_METAPATH_DISTRO "
-    DISTRO_VERSION = "${BUILDNAME}"
-    BB_SIGNATURE_HANDLER = "OEEquivHash"
-    BB_HASHSERVE = "auto"
-    OPKG_ARGS:append = " --force-overwrite"
-
-    MIRRORS += "git://github.com git://git.codelinaro.org/clo/yocto-mirrors/github/ git://.*/.*/ git://git.codelinaro.org/clo/yocto-mirrors/ https://.*/.*/ https://codelinaro.jfrog.io/artifactory/codelinaro-le/ "
+    BBFILE_PATTERN_IGNORE_EMPTY_qcom = "1"
+    BBFILE_PATTERN_IGNORE_EMPTY_qcom-hwe = "1"
 
     cust_id = "1020"

@@ -70,7 +70,7 @@ There are two supported build methods:
 ### Sync Source
 
 ```bash
-git clone -b LY.AU.0.2.1.r2-02200-gen5meta.0 \
+git clone -b LY.AU.0.2.1.r2-03600-gen5meta.0 \
     https://git.codelinaro.org/clo/le/qcom-auto-manifest
 
 cd qcom-auto-manifest
@@ -78,10 +78,10 @@ cd qcom-auto-manifest
 
 ### Single Machine Configuration
 
-#### sa8797
+#### gen5
 
 ```bash
-kas-container build kas/sa8797.yml:kas/qc-buildserver.yml
+kas-container build kas/gen5.yml:kas/qc-buildserver.yml
 ```
 
 #### sa8775-flex
@@ -92,11 +92,11 @@ kas-container build kas/sa8775-flex.yml:kas/qc-buildserver.yml
 
 ### Multi Machine Configuration
 
-#### sa8775-flex + sa8797
+#### sa8775-flex + gen5
 
 ```bash
 kas-container build \
-    kas/sa8775-flex-sa8797-multiconfig.yml:kas/qc-buildserver.yml
+    kas/sa8775-flex-gen5-multiconfig.yml:kas/qc-buildserver.yml
 ```
 
 </details>
@@ -114,16 +114,16 @@ kas-container build \
 repo init \
     -u https://git.codelinaro.org/clo/le/qcom-auto-manifest \
     -b commonrelease \
-    -m LY.AU.0.2.1.r2-02200-gen5meta.0.xml
+    -m LY.AU.0.2.1.r2-03600-gen5meta.0.xml
 
 repo sync -j10
 ```
 
-### Build sa8797
+### Build gen5
 
 ```bash
-source poky/build/conf/set_bb_env.sh -t sa8797
-build-sa8797-image
+source poky/build/conf/set_bb_env.sh -t gen5
+build-gen5-image
 ```
 
 ### Build sa8775-flex
@@ -136,3 +136,4 @@ build-sa775-flex-image
 </details>
 
 ---
+
