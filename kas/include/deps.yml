@@ -86,19 +86,19 @@ repos:
   meta-qcom-auto:
     url: https://git.codelinaro.org/clo/le/meta-qcom-auto.git
     branch: auto-yocto.qclinux.1.0.r9-rel
-    commit: b6d4202f8f6eca93d278cd6943d03410cabf5eb2
+    commit: 39e50585d9fa19c97bcf0af9472b2d2a3bcc399b
     path: layers/meta-qcom-auto
 
   meta-qcom-auto-distro:
     url: https://git.codelinaro.org/clo/le/meta-qcom-auto-distro.git
     branch: auto-yocto.qclinux.1.0.r9-rel
-    commit: ed0273bd7fa4527589a70754e1dedac1d79f2283
+    commit: 50a3cd7ccb9099b39d1330051763f48fe647ba84
     path: layers/meta-qcom-auto-distro
 
   meta-qcom-auto-extras:
     url: https://qpm-git.qualcomm.com/home2/git/qualcomm/snapdragon-auto-2026-le-1-1_hlos_oem_metadata.git
-    tag: LE.1.1_SRC_URI_r000111.1
-    commit: f13cfebf2053b850bde3a8fd1a50ffe2b96fd301
+    tag: LE.1.1_SRC_URI_r000181.1
+    commit: 00160baceaec3810b2486805e001a5b92de308c4
     path: layers/meta-qcom-auto-extras
 
   poky:

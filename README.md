@@ -41,6 +41,9 @@ git config --global \
 ### Customer ID
 - Ensure that the cust_id specified in kas/include/base.yml is updated to the appropriate customer ID configured in QPM.
 
+### PVM_TAG
+- PVM tag is the label on the manifest or the name of the manifest XML file. Example: LY.AU.0.2.1.r2-03600-gen5meta.0
+
 </details>
 
 ---
@@ -70,7 +73,7 @@ There are two supported build methods:
 ### Sync Source
 
 ```bash
-git clone -b LY.AU.0.2.1.r2-03600-gen5meta.0 \
+git clone -b <PVM_TAG> \
     https://git.codelinaro.org/clo/le/qcom-auto-manifest
 
 cd qcom-auto-manifest
@@ -114,7 +117,7 @@ kas-container build \
 repo init \
     -u https://git.codelinaro.org/clo/le/qcom-auto-manifest \
     -b commonrelease \
-    -m LY.AU.0.2.1.r2-03600-gen5meta.0.xml
+    -m <PVM_TAG>.xml
 
 repo sync -j10
 ```
