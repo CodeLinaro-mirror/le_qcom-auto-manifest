@@ -31,4 +31,4 @@
   <project name="meta-qcom-auto" path="layers/meta-qcom-auto" remote="clo-le" revision="39e50585d9fa19c97bcf0af9472b2d2a3bcc399b" upstream="refs/heads/auto-yocto.qclinux.1.0.r9-rel" />
 
   <project name="snapdragon-auto-2026-le-1-1_hlos_oem_metadata" path="layers/meta-qcom-auto-extras" remote="qcprop" upstream="refs/tags/LE.1.1_SRC_URI_r000181.1" />
-
+</manifest>
