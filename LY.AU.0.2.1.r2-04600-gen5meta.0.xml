@@ -28,7 +28,7 @@
   <project  name="meta-qcom-realtime" path="layers/meta-qcom-realtime" remote="qcgithub" revision="edd8a5945bb6d0bb616fe0262b6df0272375ae65" upstream="refs/heads/scarthgap" />
   <project name="qti-conf" path="poky/build/conf" remote="clo-le" revision="92bdddecf1c151689543b9a4ee1f9935dac5a67a" upstream="refs/heads/auto-yocto.qclinux.1.0.r9-rel" />
   <project name="meta-qcom-auto-distro" path="layers/meta-qcom-auto-distro" remote="clo-le" revision="50a3cd7ccb9099b39d1330051763f48fe647ba84" upstream="refs/heads/auto-yocto.qclinux.1.0.r9-rel" />
-  <project name="meta-qcom-auto" path="layers/meta-qcom-auto" remote="clo-le" revision="39e50585d9fa19c97bcf0af9472b2d2a3bcc399b" upstream="refs/heads/auto-yocto.qclinux.1.0.r9-rel" />
+  <project name="meta-qcom-auto" path="layers/meta-qcom-auto" remote="clo-le" revision="a61a6c6cc861dd97eda3a7649df978461253ee47" upstream="refs/heads/auto-yocto.qclinux.1.0.r9-rel" />
 
   <project name="snapdragon-auto-2026-le-1-1_hlos_oem_metadata" path="layers/meta-qcom-auto-extras" remote="qcprop" upstream="refs/tags/LE.1.1_SRC_URI_r000181.1" />
 </manifest>

@@ -86,7 +86,7 @@ repos:
   meta-qcom-auto:
     url: https://git.codelinaro.org/clo/le/meta-qcom-auto.git
     branch: auto-yocto.qclinux.1.0.r9-rel
-    commit: 39e50585d9fa19c97bcf0af9472b2d2a3bcc399b
+    commit: a61a6c6cc861dd97eda3a7649df978461253ee47
     path: layers/meta-qcom-auto
 
   meta-qcom-auto-distro:
